@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/epf-app-demo/office/static/css/main.be6876b7.chunk.css",
-    "main.js": "/epf-app-demo/office/static/js/main.4a71b617.chunk.js",
-    "main.js.map": "/epf-app-demo/office/static/js/main.4a71b617.chunk.js.map",
-    "runtime-main.js": "/epf-app-demo/office/static/js/runtime-main.00d308ca.js",
-    "runtime-main.js.map": "/epf-app-demo/office/static/js/runtime-main.00d308ca.js.map",
-    "static/js/2.dbed4ab8.chunk.js": "/epf-app-demo/office/static/js/2.dbed4ab8.chunk.js",
-    "static/js/2.dbed4ab8.chunk.js.map": "/epf-app-demo/office/static/js/2.dbed4ab8.chunk.js.map",
-    "index.html": "/epf-app-demo/office/index.html",
-    "static/css/main.be6876b7.chunk.css.map": "/epf-app-demo/office/static/css/main.be6876b7.chunk.css.map",
-    "static/js/2.dbed4ab8.chunk.js.LICENSE.txt": "/epf-app-demo/office/static/js/2.dbed4ab8.chunk.js.LICENSE.txt"
+    "main.css": "/epf-app-demo/static/css/main.318cc571.chunk.css",
+    "main.js": "/epf-app-demo/static/js/main.de745b47.chunk.js",
+    "main.js.map": "/epf-app-demo/static/js/main.de745b47.chunk.js.map",
+    "runtime-main.js": "/epf-app-demo/static/js/runtime-main.1ef116aa.js",
+    "runtime-main.js.map": "/epf-app-demo/static/js/runtime-main.1ef116aa.js.map",
+    "static/js/2.63931a91.chunk.js": "/epf-app-demo/static/js/2.63931a91.chunk.js",
+    "static/js/2.63931a91.chunk.js.map": "/epf-app-demo/static/js/2.63931a91.chunk.js.map",
+    "index.html": "/epf-app-demo/index.html",
+    "static/css/main.318cc571.chunk.css.map": "/epf-app-demo/static/css/main.318cc571.chunk.css.map",
+    "static/js/2.63931a91.chunk.js.LICENSE.txt": "/epf-app-demo/static/js/2.63931a91.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.00d308ca.js",
-    "static/js/2.dbed4ab8.chunk.js",
-    "static/css/main.be6876b7.chunk.css",
-    "static/js/main.4a71b617.chunk.js"
+    "static/js/runtime-main.1ef116aa.js",
+    "static/js/2.63931a91.chunk.js",
+    "static/css/main.318cc571.chunk.css",
+    "static/js/main.de745b47.chunk.js"
   ]
 }
