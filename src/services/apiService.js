@@ -113,17 +113,17 @@ const prepareData = (apiData, { lat = '', long = '' }, callback) => {
 
     apiData.map(office => {
         let state = states.filter(state => state.key === office.ste)
-        
+
         office['state'] = state.length > 0 ? state[0].value : '-'
         office['no'] = no;
-        office['distance'] = '-'
+        office['distance'] = '-';
 
         // User allowed to capture their location information
-        if (lat !== '' && long !== ''){
+        if (lat !== '' && long !== '') {
             let distanceFromOffice = distance(lat, long, office['lat'], office['lon'])
             office['distance'] = distanceFromOffice >= 1 ? distanceFromOffice.toFixed(2) + ' KM' : (distanceFromOffice / 1000).toFixed(2) + ' Meter';
         }
-        
+
         finalData.push(office)
         no++;
     });
@@ -143,12 +143,12 @@ const ApiService = {
                 mode: 'no-cors'
             }
         })
-        .then(response => {
-            getLocation(response.data.lis, callback)
-        })
-        .catch(err => {
-            alert('API Error')
-        })
+            .then(response => {
+                getLocation(response.data.lis, callback)
+            })
+            .catch(err => {
+                alert('API Error')
+            })
     }
 }
 

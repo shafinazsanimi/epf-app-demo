@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
-import { 
-    Box, 
-    Grid, 
-    createStyles, 
-    FormControl, 
-    IconButton, 
-    InputLabel, 
-    InputAdornment, 
-    OutlinedInput, 
-    withStyles, 
-    Typography, 
-    Card 
+import {
+    Box,
+    Grid,
+    createStyles,
+    FormControl,
+    IconButton,
+    InputLabel,
+    InputAdornment,
+    OutlinedInput,
+    withStyles,
+    Typography,
+    Card
 } from '@material-ui/core';
 import ApiService from '../services/apiService';
 import DataTable from 'react-data-table-component';
 import SortIcon from '@material-ui/icons/ArrowDownward';
 import SearchIcon from '@material-ui/icons/Search';
+import DataTableExtensions from 'react-data-table-component-extensions';
 import { Filter } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 const styles = createStyles(() => ({
     mainTitle: {
@@ -47,7 +49,8 @@ const columns = [
     {
         name: "NAME",
         selector: "nam",
-        sortable: true
+        sortable: true,
+        cell: row => <Link to={'/details/' + row.key}>{row.nam} </Link>,
     },
     {
         name: "ADDRESS",
@@ -104,6 +107,7 @@ class MainTable extends Component {
                         display="flex"
                         flex="1"
                         flexDirection="column"
+
                     >
                         <Box
                             display="flex"
@@ -122,7 +126,7 @@ class MainTable extends Component {
                     </Box>
                 </Grid>
 
-                <Grid
+                {/* <Grid
                     container
                     direction="row"
                     justify="center"
@@ -140,22 +144,22 @@ class MainTable extends Component {
                             <OutlinedInput
                                 id="outlined-adornment"
                                 endAdornment={
-                                <InputAdornment position="end">
-                                    <IconButton
-                                        edge="end"
-                                    >
-                                    <SearchIcon />
-                                    </IconButton>
-                                </InputAdornment>
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            edge="end"
+                                        >
+                                            <SearchIcon />
+                                        </IconButton>
+                                    </InputAdornment>
                                 }
                                 labelWidth={63}
                             />
                         </FormControl>
                         <IconButton>
-                           <Filter color='#2f3291' />
+                            <Filter color='#2f3291' />
                         </IconButton>
                     </Box>
-                </Grid>
+                </Grid> */}
 
                 <Grid
                     container
@@ -166,13 +170,20 @@ class MainTable extends Component {
                     xs={12}
                 >
                     <Card className={classes.tableCard}>
-                        <DataTable
+                        <DataTableExtensions
                             columns={columns}
                             data={this.state.officeList}
-                            defaultSortField="State"
-                            sortIcon={<SortIcon />}
-                            pagination
-                        />
+                            export={false}
+                            print={false}
+                            filterPlaceholder="Search..."
+                        >
+                            <DataTable
+                                noHeader
+                                defaultSortField="State"
+                                sortIcon={<SortIcon />}
+                                pagination
+                            />
+                        </DataTableExtensions>
                     </Card>
                 </Grid>
             </Grid>

@@ -24,3 +24,37 @@ body {
 .rdt_TableHeadRow > div:last-child{
   border: 0;
 }
+
+input[name=filterDataTable]{
+  font: inherit;
+  height: 1.4375em;
+   outline: none;
+   border: 1px solid rgba(0, 0, 0, 0.4);
+   padding: 10px 14px;
+   border-radius: 5px;
+   width: 50%;
+   font-size: 18px;
+   border-radius: 20px;
+}
+
+
+.data-table-extensions-filter{
+   
+  margin: 20px 50px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+}
+
+.data-table-extensions-filter::after{
+   content: "Filter";
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   color: #2f3291;
+   font-size: 18px;
+   margin-left: 20px;
+   cursor: pointer;
+}
